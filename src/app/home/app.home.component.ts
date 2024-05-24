@@ -6,7 +6,7 @@ import { Component } from "@angular/core";
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: 'app.home.html',
+  templateUrl: 'app.home.component.html',
 })
 export class AppHomeComponent {
 

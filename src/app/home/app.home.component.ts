@@ -3,17 +3,16 @@ import { Component, inject } from "@angular/core";
 import { RepositorioComponent } from "../components/repositorio/repositorio.component";
 import { LandingPageService } from "../services/landing-page.service";
 import { Repository } from "../interfaces/repositorios.interfaces";
+import { ContactoComponent } from "../components/contacto/contacto.component";
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RepositorioComponent],
+  imports: [CommonModule, RepositorioComponent, ContactoComponent],
   templateUrl: 'app.home.component.html',
 })
 export class AppHomeComponent {
-
-  items = [1, 2, 3, 4, 5];
 
   repositorios: Repository[] = [];
 
@@ -26,7 +25,7 @@ export class AppHomeComponent {
       .subscribe(
         resp => {
           this.repositorios = resp;
-          console.log(resp)
+          // console.log(resp)
         }
       )
 

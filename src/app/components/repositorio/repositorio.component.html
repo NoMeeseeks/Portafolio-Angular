@@ -1,17 +1,15 @@
 <div class="flex flex-col rounded-lg p-2 bg-gray-100 flex-grow-0">
     <a class="text-4xl font-bold">Proyecto: {{titulo}}</a>
     <div class="flex flex-col mt-2">
-        <a class="text-xl font-semibold">Descripcion</a>
-        <p class="mb-4 mt-0 text-base font-light leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing</p>
+        <a class="text-xl font-semibold">Descripcion:</a>
+        <p class="mb-4 mt-0 text-base font-light leading-relaxed">{{descripcion}}</p>
     </div>
 
     <div class="mt-2 m-2">
         <a class="text-xl font-semibold">tecnologias usadas: </a>
-
-        <a class="rounded-full font-medium shadow uppercase p-2 mx-2 text-sm bg-gray-300 ">Angular</a>
-        <a class="rounded-full font-medium shadow uppercase p-2 mx-2 text-sm bg-pink-100">Html</a>
-        <a class="rounded-full font-medium shadow uppercase p-2 mx-2 text-sm bg-yellow-100">Css</a>
-        <a class="rounded-full font-medium shadow uppercase p-2 mx-2 text-sm bg-orange-100">Tailwind</a>
+        @for (lenguaje of lenguajesUsados; track $index) {
+        <a class="rounded-full font-medium shadow uppercase p-2 mx-2 text-sm bg-gray-300 ">{{lenguaje}}</a>
+        }
 
     </div>
 </div>

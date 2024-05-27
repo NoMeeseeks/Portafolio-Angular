@@ -18,7 +18,9 @@ export class AppHomeComponent {
 
   private _landingPageService = inject(LandingPageService);
 
-  constructor() { this.listaDeRepositorios() }
+  constructor() {
+    this.listaDeRepositorios()
+  }
 
   private listaDeRepositorios() {
     this._landingPageService.obtenerRepositorios()

@@ -27,14 +27,11 @@ export class RepositorioComponent {
   constructor() { this.obtenerLenguajesUsados() }
 
   private obtenerLenguajesUsados() {
-    console.log('entre');
 
-    // if (this.titulo === null || this.titulo === '') { return }
     this._landingPage.obtenerLenguajesDelRepositorio(this.lenguajesUrl)
       .subscribe(
         resp => {
-          this.lenguajesUsados = resp;
-          console.log(resp);
+          this.lenguajesUsados = JSON.stringify(resp);
           console.log(this.lenguajesUsados);
         }
       )

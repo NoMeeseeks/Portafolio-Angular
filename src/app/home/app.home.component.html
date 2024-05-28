@@ -27,6 +27,7 @@
     <!-- Muestra de proyectos principales -->
     <div class="flex flex-wrap gap-2 sm:gap-4 rounded-lg shadow-lg m-4 p-4  lg:mx-16 bg-white" id="proyectos">
 
+
         @for (repo of repositorios; track $index)
         {
         <app-repositorio class="flex-auto" [titulo]="repo.name" [descripcion]="repo.description"
@@ -35,7 +36,7 @@
 
     </div>
 
-    <div>
+    <div id="contacto">
         <app-contacto />
     </div>
 </div>
